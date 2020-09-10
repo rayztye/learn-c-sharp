@@ -45,10 +45,11 @@ namespace classes
 
         public BackAccount(string name, decimal initialBalance)
         {
-            this.Owner = name;
-            this.Balance = initialBalance;
             this.Number = accountNumberSeed.ToString();
             accountNumberSeed++;
+
+            this.Owner = name;
+            MakeDeposit(initialBalance, DateTime.Now, "Initial balance");
         }
     }
 }
